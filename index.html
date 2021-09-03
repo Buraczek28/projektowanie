@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study algorithm</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <div class="firstCol">
+            <div class="firstCol-buttons">
+                <button id="resetBtn">Reset</button>
+                <button id="randomBtn">Random</button>
+            </div>
+
+            <div class="firstCol-all-inputs">
+                <div class="firstCol-inputs">
+                    <p>AX</p>
+                    <p>BX</p>
+                    <p>CX</p>
+                    <p>DX</p>
+                </div>
+                <div class="firstCol-inputs">
+                    <div>
+                        <input type="text" placeholder="Value" value="" class=" firstCol-input" id="AX-input"
+                            maxlength="4" />
+                        <p class="error error-1">Value must be in hexadecymal format</p>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Value" value="" class="firstCol-input" id="BX-input"
+                            maxlength="4" />
+                        <p class="error error-2">Value must be in hexadecymal format</p>
+                    </div>
+
+                    <div>
+                        <input type="text" placeholder="Value" value="" class="firstCol-input" id="CX-input"
+                            maxlength="4" />
+                        <p class="error error-3">Value must be in hexadecymal format</p>
+                    </div>
+
+                    <div>
+                        <input type="text" placeholder="Value" value="" class="firstCol-input" id="DX-input"
+                            maxlength="4" />
+                        <p class="error error-4">Value must be in hexadecymal format</p>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="firstCol-downButtons">
+                <div>
+                    <button class="moveBtn" data-value="ax-bx">MOV AX,BX</button>
+                    <button class="moveBtn" data-value="ax-cx">MOV AX,CX</button>
+                    <button class="moveBtn" data-value="ax-dx">MOV AX,DX</button>
+                    <button class="moveBtn" data-value="bx-ax">MOV BX,AX</button>
+                    <button class="moveBtn" data-value="bx-cx">MOV BX,CX</button>
+                    <button class="moveBtn" data-value="bx-dx">MOV BX,DX</button>
+                    <button class="moveBtn" data-value="cx-ax">MOV CX,AX</button>
+                    <button class="moveBtn" data-value="cx-bx">MOV CX,BX</button>
+                    <button class="moveBtn" data-value="cx-dx">MOV CX,DX</button>
+                    <button class="moveBtn" data-value="dx-ax">MOV DX,AX</button>
+                    <button class="moveBtn" data-value="dx-bx">MOV DX,BX</button>
+                    <button class="moveBtn" data-value="dx-cx">MOV DX,CX</button>
+                </div>
+
+                <div>
+                    <button class="xchangeBtn" data-value="ax-bx">XCHG AX,BX</button>
+                    <button class="xchangeBtn" data-value="ax-cx">XCHG AX,CX</button>
+                    <button class="xchangeBtn" data-value="ax-dx">XCHG AX,DX</button>
+                    <button class="xchangeBtn" data-value="bx-ax">XCHG BX,AX</button>
+                    <button class="xchangeBtn" data-value="bx-cx">XCHG BX,CX</button>
+                    <button class="xchangeBtn" data-value="bx-dx">XCHG BX,DX</button>
+                    <button class="xchangeBtn" data-value="cx-ax">XCHG CX,AX</button>
+                    <button class="xchangeBtn" data-value="cx-bx">XCHG CX,BX</button>
+                    <button class="xchangeBtn" data-value="cx-dx">XCHG CX,DX</button>
+                    <button class="xchangeBtn" data-value="dx-ax">XCHG DX,AX</button>
+                    <button class="xchangeBtn" data-value="dx-bx">XCHG DX,BX</button>
+                    <button class="xchangeBtn" data-value="dx-cx">XCHG DX,CX</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="secondCol">
+            <div>
+                <input type="radio" name="register" id="radio1" />
+                <label for="radio1">Z rejestru do pamięci</label>
+            </div>
+            <div>
+                <input type="radio" name="register" id="radio2" />
+                <label for="radio2">Z pamięci rejestru</label>
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div>
+                <input type="radio" name="index" id="radio3" />
+                <label for="radio3">indeksowy</label>
+            </div>
+            <div>
+                <input type="radio" name="index" id="radio4" />
+                <label for="radio4">bazowy</label>
+            </div>
+
+            <div>
+                <input type="radio" name="index" id="radio5" />
+                <label for="radio5">indeksowo-bazowy</label>
+            </div>
+
+
+            <div class="line"></div>
+
+            <div>
+                <input type="radio" name="order1" id="radio6" />
+                <label for="radio6">SI</label>
+            </div>
+
+            <div>
+                <input type="radio" name="order1" id="radio7" />
+                <label for="radio7">DI</label>
+            </div>
+
+            <div class="line"></div>
+
+            <div>
+                <input type="radio" name="order1-5" id="radio8" />
+                <label for="radio8">BX</label>
+            </div>
+
+            <div>
+                <input type="radio" name="order1-5" id="radio9" />
+                <label for="radio9">BP</label>
+            </div>
+
+
+            <div class="line"></div>
+
+            <div>
+                <input type="radio" name="order2" id="radio10" />
+                <label for="radio10">AX</label>
+            </div>
+
+            <div>
+                <input type="radio" name="order2" id="radio11" />
+                <label for="radio11">BX</label>
+            </div>
+
+            <div>
+                <input type="radio" name="order2" id="radio12" />
+                <label for="radio12">CX</label>
+            </div>
+
+            <div>
+                <input type="radio" name="order2" id="radio13" />
+                <label for="radio13">DX</label>
+            </div>
+
+            <div class="line"></div>
+
+
+            <div>
+                <input type="radio" name="order3" id="radio14" />
+                <label for="radio14">SI BX</label>
+            </div>
+
+            <div>
+                <input type="radio" name="order3" id="radio15" />
+                <label for="radio15">DI BX</label>
+            </div>
+
+            <div>
+                <input type="radio" name="order3" id="radio16" />
+                <label for="radio16">SI BP</label>
+            </div>
+
+            <div>
+                <input type="radio" name="order3" id="radio17" />
+                <label for="radio17">DI BP</label>
+            </div>
+
+
+        </div>
+
+        <div class="thirdCol">
+            <button>Reset</button>
+
+            <div class="thirdCol-form">
+                <div class="thirdCol-text">
+                    <p>SI</p>
+                    <p>DI</p>
+                    <p>BP</p>
+                    <p>SP</p>
+                    <p>DISP</p>
+                </div>
+                <div class="thirdCol-inputs">
+                    <input type="text" value="0000" />
+                    <input type="text" value="0000" />
+                    <input type="text" value="0000" />
+                    <input type="text" value="0000" />
+                    <input type="text" value="0000" />
+                </div>
+
+                <div class="thirdCol-inputs">
+                    <input type="text" />
+                    <input type="text" />
+                    <input type="text" />
+                    <input type="text" />
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="thirdCol-basicButtons">
+                <button>MOV</button>
+                <button>XCHG</button>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="thirdCol-buttons">
+                <div>
+                    <button>PUSH AX</button>
+                    <button>PUSH BX</button>
+                    <button>PUSH CX</button>
+                    <button>PUSH DX</button>
+                </div>
+
+                <div>
+                    <button>POP AX</button>
+                    <button>POP BX</button>
+                    <button>POP CX</button>
+                    <button>POP DX</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script/index.js"></script>
+</body>
+
+</html>
